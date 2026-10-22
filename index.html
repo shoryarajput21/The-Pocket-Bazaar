@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Pocket Bazaar – Every Product Just ₹60 | Diwali Dhamaka Sale</title>
+<meta name="description" content="The Pocket Bazaar: Diwali décor, diyas, lights and gifts. Every product just ₹60. Small Prices. Smart Shopping.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hdr">
+  <a href="#home" class="logo">🪔 The Pocket Bazaar</a>
+  <nav>
+    <a href="#home">Home</a><a href="#shop">Shop</a><a href="#track">Track Order</a><a href="#contact">Contact</a>
+  </nav>
+  <button class="cartbtn" id="openCart" aria-label="Open cart">🛒 <span id="cartCount">0</span></button>
+</header>
+
+<section id="home" class="hero">
+  <div class="sparkles" aria-hidden="true"></div>
+  <div class="lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="hero-in">
+    <div class="hero-txt">
+      <p class="brand">THE POCKET BAZAAR</p>
+      <h1>DIWALI DHAMAKA SALE</h1>
+      <h2>EVERY PRODUCT JUST</h2>
+      <div class="price-badge"><span>₹60!</span></div>
+      <p class="tag">Small Prices. Smart Shopping.</p>
+      <p class="fast">FAST DELIVERY — WITHIN 3 DAYS 🚚</p>
+      <p class="tag2">Shop Smart. Save More.</p>
+      <a href="#shop" class="btn glow">SHOP NOW</a>
+    </div>
+    <div class="collage" aria-label="Featured Diwali products">
+      <img class="c1" src="images/product-17.jpg" alt="Ceramic lotus diyas" fetchpriority="high">
+      <img class="c2" src="images/product-11.jpg" alt="Lotus pom-pom door hangings">
+      <img class="c3" src="images/product-14.jpg" alt="Om Shree tulsi-style diyas">
+      <img class="c4" src="images/product-1.jpg" alt="Pearl jhumar hanging lights">
+      <span class="chip">🪔 Diyas</span><span class="chip c-b">✨ Lights</span><span class="chip c-c">🌸 Décor</span>
+    </div>
+  </div>
+  <span class="diya d1" aria-hidden="true">🪔</span><span class="diya d2" aria-hidden="true">🪔</span>
+</section>
+
+<section class="fastbar"><b>FAST DELIVERY 🚚 — DELIVERY WITHIN 3 DAYS</b><span>Get Your Favourite Products Delivered to Your Doorstep in Just 3 Days!</span></section>
+
+<section id="shop" class="wrap">
+  <h2 class="sec">SHOP ALL PRODUCTS</h2>
+  <p class="sub">Amazing Products. Just ₹60 Each.</p>
+  <div class="tools">
+    <input id="search" type="search" placeholder="Search products…" aria-label="Search products">
+    <select id="cat" aria-label="Filter by category"></select>
+  </div>
+  <div id="grid" class="grid"></div>
+  <p id="empty" class="empty" hidden>No products found. Try a different search.</p>
+</section>
+
+<section id="track" class="wrap narrow">
+  <h2 class="sec">TRACK MY ORDER</h2>
+  <form id="trackForm" class="card">
+    <input id="tId" placeholder="Order ID (e.g. TPB-XXXXXX)" required>
+    <input id="tMob" placeholder="Registered mobile number" inputmode="numeric" maxlength="10" required>
+    <button class="btn">Track</button>
+    <div id="trackOut"></div>
+  </form>
+</section>
+
+<section id="contact" class="wrap narrow">
+  <h2 class="sec">ABOUT & CONTACT</h2>
+  <div class="card">
+    <p><b>The Pocket Bazaar</b> – affordable festive décor and gifts for Indian homes.</p>
+    <p>Email: pocketbazar@gmail.com <span id="cEmail"></span> </p>
+    <details><summary>Shipping Policy</summary><p>We aim to deliver within 3 days where our courier can serve your PIN code; otherwise we show an estimated date. Delivery charges, if any, are shown at checkout. <i>(Edit this text before launch.)</i></p></details>
+    <details><summary>Return & Refund Policy</summary><p>Placeholder – add your return, damage and refund terms here.</p></details>
+    <details><summary>Privacy Policy</summary><p>Placeholder – we use your name, mobile and address only to deliver your order.</p></details>
+    <details><summary>Terms & Conditions</summary><p>Placeholder – add your store terms here.</p></details>
+  </div>
+</section>
+
+<footer>© <span id="yr"></span> The Pocket Bazaar · Small Prices. Smart Shopping. · Shop Smart. Save More.</footer>
+
+<!-- Cart drawer -->
+<aside id="drawer" class="drawer" aria-hidden="true">
+  <div class="dh"><b>Your Cart</b><button id="closeCart" aria-label="Close">✕</button></div>
+  <div id="cartItems"></div>
+  <div class="df">
+    <p class="fastsm">FAST DELIVERY 🚚 Delivery within 3 days</p>
+    <div class="row"><span>Subtotal</span><b id="subtotal">₹0</b></div>
+    <button class="btn" id="checkoutBtn">Proceed to Checkout</button>
+    <button class="btn ghost" id="contBtn">Continue Shopping</button>
+  </div>
+</aside>
+
+<!-- Modal for checkout / payment / confirmation -->
+<div id="modal" class="modal" hidden><div class="mbox"><button class="x" id="closeModal" aria-label="Close">✕</button><div id="mbody"></div></div></div>
+<div id="toast" class="toast" role="status"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
